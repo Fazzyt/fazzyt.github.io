@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>fazzyt</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row align-items-start">
+                <!-- Левая часть с текстом -->
+                <div class="col-md-4 text-container">
+                    <h1 class="logo_text">Fazzyt</h1>
+                    <p class="sub_text" id="sub_text"></p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="block">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6">
+                    <div class="about_text_block">
+                        <p class="about_text">
+                            fazzyt — программист и хакер, 
+                            активно участвовавший в разработке множества различных проектов, 
+                            боты, сайты и решения для автоматизации процессов.
+                            <br><br>
+                            Всего проектов: 15<br>
+                            Цель: 100000$<br>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="about_block">
+                        <img src="img/antixrest.jpg" class="img_about" alt="antixrest">
+                        <div class="about_content">
+                            <p>Antixrest cartel</p>
+                            <a href="https://t.me/Antixrest_cartel">ссылка</a>
+                        </div>   
+                    </div>
+
+                    <div class="about_block">
+                        <img src="img/infST.gif" class="img_about" alt="InfStorm">
+                        <div class="about_content">
+                            <p>Информационный шторм</p>
+                            <a href="https://t.me/InfStorm">ссылка</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="access-message denied" id="accessMessage">Access Denied</div>
+                    <div class="about_access-message" id="accessMessage_about"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy;<span id="year"></span><span> fazzyt. All rights reserved.</span>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts/hello_world.js"></script>
+    <script src="scripts/year.js"></script>
+    <script src="scripts/access.js"></script>
+</body>
+</html>
