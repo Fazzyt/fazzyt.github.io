@@ -1,5 +1,6 @@
 const messageElement = document.getElementById('accessMessage');
-const messageElement_about = document.getElementById('accessMessage_about');
+const infoBlock = document.getElementById('info');
+const infoBlock_img = document.getElementById('info_img');
 
 // Создаем IntersectionObserver
 const observer = new IntersectionObserver((entries) => {
@@ -7,22 +8,28 @@ const observer = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       setTimeout(() => 
         {
-            messageElement.textContent = "Access Granted";
-            messageElement_about.textContent = "hello world"
+            messageElement.textContent = "> Access Granted";
             messageElement.classList.remove('denied');
             messageElement.classList.add('granted');
-        }, 3001) 
-      
-    } else {
-      // Если элемент за пределами экрана
-      messageElement.textContent = "Access Denied";
-      messageElement_about.textContent = ""
+            infoBlock.classList.remove('hidden');
+            infoBlock.classList.add('visible');
+            infoBlock_img.classList.remove('hidden');
+            infoBlock_img.classList.add('visible');
+        }, 600) 
+    }  else {
+      messageElement.textContent = "> Access Denied";
       messageElement.classList.remove('granted');
       messageElement.classList.add('denied');
+      infoBlock.classList.remove('visible');
+      infoBlock.classList.add('hidden');
+      infoBlock_img.classList.remove('visible');
+      infoBlock_img.classList.add('hidden');
     }
+
+  
   });
-}, {
-  threshold: 0.90 // Срабатывает, когда 50% элемента видны
+  }, {
+  threshold: 0.5 // Срабатывает, когда 50% элемента видны
 });
 
 // Наблюдаем за элементом

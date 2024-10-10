@@ -12,33 +12,54 @@
 
 <body>
     <header>
-        <div class="container">
+        <div class="container"> 
             <div class="row align-items-start">
-                <!-- Левая часть с текстом -->
-                <div class="col-md-4 text-container">
+                
+                <div class="col-md-4 text-container"> 
                     <h1 class="logo_text">Fazzyt</h1>
                     <p class="sub_text" id="sub_text"></p>
                 </div>
             </div>
         </div>
     </header>
+
     <div class="block">
         <div class="container">
             <div class="row">
-
-                <div class="col-md-6">
-                    <div class="about_text_block">
-                        <p class="about_text">
-                            fazzyt — программист и хакер, 
-                            активно участвовавший в разработке множества различных проектов, 
-                            боты, сайты и решения для автоматизации процессов.
-                            <br><br>
-                            Всего проектов: 15<br>
-                            Цель: 100000$<br>
-                        </p>
+                <div class="col-md-4">
+                    <div class="info_block">
+                        <div class="info_img hidden" id="info_img">
+                            <img src="img/avatar.jpg" alt="avatar">
+                        </div>
                     </div>
                 </div>
+                <div class="col-md-8">
+                    <div class="info_block">
+                        <div class="access-message denied" id="accessMessage">> Access Denied</div>
+                        <div class="info hidden" id="info">
+                            <p class="info_date">Level of secrecy: high</p>
+                            <p class="info_date">Username: fazzyt</p>
+                            <p class="info_date">Language: Russian, English</p>
 
+                            <p class="info_date">Country: Russian</p>
+                            <p class="info_date">City: Moscow</p>
+                            <p class="info_date">District: Pechatniki</p>
+                            
+                            <p class="info_date">Skills:  hacking, programming</p>
+                            <p class="info_date">Interests: hacking, programming, reading</p>
+                            <p class="info_date">Grouping: Antixrest_cartel</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="indent_block"></div>
+
+    <div class="block">
+        <div class="container">
+            <div class="row">
                 <div class="col-md-6">
                     <div class="about_block">
                         <img src="img/antixrest.jpg" class="img_about" alt="antixrest">
@@ -51,9 +72,40 @@
                     <div class="about_block">
                         <img src="img/infST.gif" class="img_about" alt="InfStorm">
                         <div class="about_content">
-                            <p>Информационный шторм</p>
+                            <p>Information storm</p>
                             <a href="https://t.me/InfStorm">ссылка</a>
                         </div>
+                    </div>
+                    
+                    <div class="about_block">
+                        <img src="img/KGB.jpg" class="img_about" alt="КГБ">
+                        <div class="about_content">
+                            <p>KGB</p>
+                            <a href="https://t.me/xotlega">ссылка</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="about_block">
+                        <img src="img/Demon_Cry.jpg" class="img_about" alt="Demon_Cry">
+                        <div class="about_content">
+                            <p>Demon Cry</p>
+                        </div>   
+                    </div>
+
+                    <div class="about_block">
+                        <img src="img/hacker_logo.png" class="img_about" alt="soon">
+                        <div class="about_content">
+                            <p>soon</p>
+                        </div>   
+                    </div>
+
+                    <div class="about_block">
+                        <img src="img/hacker_logo.png" class="img_about" alt="soon">
+                        <div class="about_content">
+                            <p>soon</p>
+                        </div>   
                     </div>
 
                 </div>
@@ -61,23 +113,24 @@
         </div>
     </div>
 
-    <div class="block">
+    <div class="indent_block"></div>
+
+    <footer>
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <div class="access-message denied" id="accessMessage">Access Denied</div>
-                    <div class="about_access-message" id="accessMessage_about"></div>
+                <div class="col-md-6">
+                    <div class="block_footer">
+                        <p><img src="img/hacker_logo.png">&copy;<span id="year"></span> fazzyt. All rights reserved.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <footer>
-        &copy;<span id="year"></span><span> fazzyt. All rights reserved.</span>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js"></script>
     <script src="scripts/hello_world.js"></script>
+    <script src="scripts/glider.js"></script>
     <script src="scripts/year.js"></script>
     <script src="scripts/access.js"></script>
 </body>
