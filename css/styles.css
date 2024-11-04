@@ -1,0 +1,371 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('../Poppins-Regular.ttf') format('truetype');
+}
+
+:root {
+    --primary-color: #FFA500;
+    --secondary-color: #000000;
+    --text-color: #FFFFFF;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: var(--secondary-color);
+    perspective: 1px;
+    transform-style: preserve-3d;
+}
+
+.parallax-header {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+}
+
+.parallax-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8));
+    z-index: -1;
+    transform: translateZ(-1px) scale(2.2);
+    transition: transform 0.5s ease-out;
+}
+
+.parallax-header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle, transparent 50%, var(--secondary-color) 150%);
+    z-index: -1;
+}
+
+.header-content {
+    text-align: center;
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    background: rgba(255,165,0,0.1);
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+}
+
+.section {
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+}
+
+.section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.05;
+    z-index: -1;
+    transform: translateZ(-1px) scale(2);
+}
+
+.parallax-element {
+    transform: translateZ(-2px) scale(3);
+    position: absolute;
+    transition: transform 0.3s ease-out;
+}
+
+.project {
+    position: relative;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--primary-color);
+    overflow: hidden;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s ease;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    transform-style: preserve-3d;
+}
+
+.project::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+.project:hover::before {
+    top: 100%;
+}
+
+.project-image-container {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.project:hover img {
+    transform: scale(1.1);
+}
+
+.project-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-title {
+    color: var(--primary-color);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.project-description {
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.project-tag {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.8em;
+}
+
+.project-links {
+    display: flex;
+    gap: 10px;
+}
+
+.project-btn {
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s;
+    text-decoration: none;
+    flex: 1;
+    text-align: center;
+}
+
+.project-btn:hover {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.about-section {
+    padding: 80px 0;
+    background-color: var(--background-color);
+}
+
+.section-title {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.subsection-title {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.skill-tag {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(108, 99, 255, 0.2);
+}
+
+.info-list {
+    color: var(--text-color);
+    list-style-type: none;
+    padding: 0;
+}
+
+.info-list li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.info-list li strong {
+    color: var(--secondary-color);
+    margin-right: 10px;
+}
+
+.footer {
+    background: var(--secondary-color);
+    color: var(--text-color);
+    padding: 40px 0;
+}
+
+.social-links a {
+    color: var(--primary-color);
+    margin: 0 10px;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: var(--text-color);
+}
+
+[data-aos] {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    transform: translateZ(-1px) scale(2);
+}
+
+.parallax-particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.particle {
+    position: absolute;
+    background: var(--primary-color);
+    border-radius: 50%;
+    opacity: 0.3;
+    transform-origin: center;
+}
+
+.floating-element {
+    position: absolute;
+    opacity: 0.1;
+    pointer-events: none;
+    filter: blur(1px);
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(10deg); }
+}
+
+.parallax-wrapper {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+@media (max-width: 768px) {
+    .project {
+        height : 300px;
+    }
+    .project-image-container {
+        height: 150px;
+    }
+    .project-content {
+        padding: 15px;
+    }
+    .project-title {
+        font-size: 1.2em;
+    }
+    .project-description {
+        font-size: 0.9em;
+    }
+    .project-tags {
+        gap: 3px;
+    }
+    .project-tag {
+        padding: 2px 5px;
+        font-size: 0.7em;
+    }
+    .project-links {
+        gap: 5px;
+    }
+    .project-btn {
+        padding: 5px 10px;
+        font-size: 0.8em;
+    }
+    .skills-container {
+        gap: 5px;
+    }
+    .skill-tag {
+        padding: 3px 10px;
+        font-size: 0.8em;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+    .subsection-title {
+        font-size: 1.5rem;
+    }
+}
