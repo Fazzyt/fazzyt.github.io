@@ -120,7 +120,7 @@ body {
 
 .project-image-container {
     position: relative;
-    height: 200px;
+    height: 150px;
     overflow: hidden;
     border-bottom: 1px solid var(--primary-color);
 }
