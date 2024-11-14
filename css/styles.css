@@ -325,6 +325,36 @@ body {
     transform-style: preserve-3d;
 }
 
+.github-stats {
+    background-color: var(--background-color);
+    padding: 50px 0;
+}
+
+.github-card {
+    background-color: var(--card-background);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.github-card:hover {
+    transform: scale(1.05);
+}
+
+.github-data h3 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.github-data p {
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
 @media (max-width: 768px) {
     .project {
         height : 300px;
