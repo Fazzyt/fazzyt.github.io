@@ -59,10 +59,12 @@ body {
     color: var(--text-color);
     padding: 20px;
     border-radius: 10px;
-    backdrop-filter: blur(5px);
-    background: rgba(255,165,0,0.1);
     transform-style: preserve-3d;
     transition: transform 0.3s ease;
+}
+
+.header-content span {
+    color: var(--primary-color);
 }
 
 .section {

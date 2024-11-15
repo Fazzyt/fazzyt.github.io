@@ -8,7 +8,7 @@ async function fetchGitHubStats() {
         const repos = await reposResponse.json();
 
         document.getElementById('total-repos').textContent = userData.public_repos;
-        document.getElementById('total-stars').textContent = userData.total_private_repos || 0;
+        document.getElementById('total-followers').textContent = userData.followers;
 
         const languages = {};
         for (let repo of repos) {
