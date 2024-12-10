@@ -97,7 +97,7 @@ body {
     background: rgba(0, 0, 0, 0.8);
     border: 1px solid var(--primary-color);
     overflow: hidden;
-    height: 400px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     transition: all 0.4s ease;
@@ -118,24 +118,6 @@ body {
 
 .project:hover::before {
     top: 100%;
-}
-
-.project-image-container {
-    position: relative;
-    height: 150px;
-    overflow: hidden;
-    border-bottom: 1px solid var(--primary-color);
-}
-
-.project img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s;
-}
-
-.project:hover img {
-    transform: scale(1.1);
 }
 
 .project-content {
@@ -211,6 +193,12 @@ body {
     color: var(--primary-color);
     font-size: 1.8rem;
     margin-bottom: 20px;
+}
+
+.license{
+    color: var(--primary-color);
+    font-size: 1rem;
+    padding: 10px 0
 }
 
 .skills-container {
@@ -360,10 +348,7 @@ body {
 
 @media (max-width: 768px) {
     .project {
-        height : 300px;
-    }
-    .project-image-container {
-        height: 150px;
+        height : 250px;
     }
     .project-content {
         padding: 15px;
@@ -372,6 +357,10 @@ body {
         font-size: 1.2em;
     }
     .project-description {
+        font-size: 0.9em;
+    }
+    .license {
+        padding: 5px;
         font-size: 0.9em;
     }
     .project-tags {
